@@ -1,4 +1,4 @@
-package com.genspark;
+package com.genspark.xml;
 
 public class Address {
     private String city;

@@ -1,4 +1,4 @@
-package com.genspark;
+package com.genspark.xml;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

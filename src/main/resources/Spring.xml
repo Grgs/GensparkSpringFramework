@@ -3,13 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="Location" class="com.genspark.Address">
+    <bean id="Location" class="com.genspark.xml.Address">
         <property name="city" value="Richmond"/>
         <property name="state" value="Virginia"/>
         <property name="zipcode" value="01234"/>
         <property name="country" value="USA"/>
     </bean>
-    <bean id="Person" class="com.genspark.Student">
+    <bean id="Person" class="com.genspark.xml.Student">
         <property name="id" value="12"/>
         <property name="name" value="A Student"/>
         <property name="address" ref="Location"/>
@@ -23,16 +23,16 @@
         </property>
     </bean>
 
-    <bean id="Number1" class="com.genspark.Phone">
+    <bean id="Number1" class="com.genspark.xml.Phone">
         <property name="mob" value="01"/>
     </bean>
-    <bean id="Number2" class="com.genspark.Phone">
+    <bean id="Number2" class="com.genspark.xml.Phone">
         <property name="mob" value="012"/>
     </bean>
-    <bean id="Number3" class="com.genspark.Phone">
+    <bean id="Number3" class="com.genspark.xml.Phone">
         <property name="mob" value="0123"/>
     </bean>
-    <bean id="Number4" class="com.genspark.Phone">
+    <bean id="Number4" class="com.genspark.xml.Phone">
         <property name="mob" value="01234"/>
     </bean>
 

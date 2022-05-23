@@ -1,4 +1,4 @@
-package com.genspark;
+package com.genspark.xml;
 
 import java.util.ArrayList;
 import java.util.List;
