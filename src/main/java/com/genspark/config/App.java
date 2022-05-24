@@ -9,7 +9,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class App {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        Printable printable = context.getBean(Student.class);
+        Printable printable = context.getBean(Printable.class);
         System.out.println(printable.toText());
     }
 }
