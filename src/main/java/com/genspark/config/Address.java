@@ -1,6 +1,6 @@
 package com.genspark.config;
 
-public class Address {
+public class Address implements Printable{
     private String city;
     private String state;
     private String country;
@@ -14,6 +14,9 @@ public class Address {
         this.state = state;
         this.country = country;
         this.zipcode = zipcode;
+    }
+    public String toText() {
+        return String.format("Address:%s, %s %s, %s.", city, state,zipcode, country);
     }
 
     public String getCity() {

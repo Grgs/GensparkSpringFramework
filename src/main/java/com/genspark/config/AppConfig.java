@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
     @Bean
-    public Student getText(){
+    public Student getStudent(){
         return new Student();
     }
 }

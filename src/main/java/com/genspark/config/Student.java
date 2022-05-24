@@ -2,21 +2,14 @@ package com.genspark.config;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class Student implements Person {
+public class Student implements Printable {
     private int id;
     private String name;
     private Address address;
 
     private List<Phone> ph;
-
-    public List<Phone> getPh() {
-        return ph;
-    }
-
-    public void setPh(List<Phone> ph) {
-        this.ph = ph;
-    }
 
     public Student() {
         this(0, "null", new Address(),  new ArrayList<>(List.of(new Phone[]{new Phone()})));
@@ -29,6 +22,20 @@ public class Student implements Person {
         this.ph = ph;
     }
 
+    @Override
+    public String toText() {
+        return String.format("Student:id=%d, name='%s', address=%s, ph=%s", id, name, address.toText(), ph.stream().
+                map(Phone::toText).collect(Collectors.toList()));
+    }
+
+    public void setPh(List<Phone> ph) {
+        this.ph = ph;
+    }
+
+    public List<Phone> getPh() {
+        return ph;
+    }
+
     public Address getAddress() {
         return address;
     }
@@ -37,11 +44,6 @@ public class Student implements Person {
         this.address = address;
     }
 
-    public String getExample() {
-        this.id = 0;
-        this.name = "A Student";
-        return this.toString();
-    }
 
 
     public int getId() {

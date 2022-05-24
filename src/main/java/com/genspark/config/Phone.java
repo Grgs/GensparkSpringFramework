@@ -1,6 +1,6 @@
 package com.genspark.config;
 
-public class Phone {
+public class Phone implements Printable{
     private String mob;
 
     public Phone() {
@@ -9,6 +9,10 @@ public class Phone {
 
     public Phone(String mob) {
         this.mob = mob;
+    }
+
+    public String toText() {
+        return String.format("Phone#'%s'", mob);
     }
 
     public String getMob() {
